@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 
 # image = Image.open('./img/0002.png')
 #
@@ -46,6 +47,15 @@ arr = np.array([[[255, 255, 255],
 img = Image.fromarray(arr.astype('uint8'))
 
 # 显示图像
-img.show()
+# img.show()
 
-img.save('./img/0003.png')
+image_gray = img.convert('RGB')
+plt.figure('sunflower')
+block = plt.imshow(image_gray)
+plt.show()
+
+
+
+# img.save('./img/0003.png')
+
+
